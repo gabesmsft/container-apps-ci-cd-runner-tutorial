@@ -13,9 +13,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y -qq --no-install-recommend
     lsb-release \
     software-properties-common &> /dev/null
 
-RUN DEBIAN_FRONTEND=noninteractive apt update && sudo apt upgrade
-
-RUN DEBIAN_FRONTEND=noninteractive apt install curl
+apt install curl
 
 RUN curl -sL https://aka.ms/InstallAzureCLIDeb | bash
 
